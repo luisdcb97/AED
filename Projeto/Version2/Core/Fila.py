@@ -21,7 +21,3 @@ class Fila:
         return self.data.pop(0)
 
 
-    #TODO subtituir isto
-    def add_item(self, item):
-        self.data.append(item)
-

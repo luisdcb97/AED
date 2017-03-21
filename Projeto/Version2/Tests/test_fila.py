@@ -1,9 +1,8 @@
 import unittest
-from unittest import TestCase
 from Projeto.Version2.Core.Fila import Fila
 
 
-class TestFila(TestCase):
+class TestFila(unittest.TestCase):
     first = None
 
     def setUp(self):
@@ -12,9 +11,9 @@ class TestFila(TestCase):
 
         global first
         first = 3
-        self.filaCheia.add_item(first)
-        self.filaCheia.add_item(1)
-        self.filaCheia.add_item(2)
+        self.filaCheia.enqueue(first)
+        self.filaCheia.enqueue(1)
+        self.filaCheia.enqueue(2)
 
     def test_is_empty(self):
         self.assertTrue(self.filaVazia.is_empty(), "TestIsEmpty| fila nao esta vazia")
